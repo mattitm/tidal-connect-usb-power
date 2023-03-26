@@ -1,0 +1,11 @@
+[Unit]
+Description=Tidal USB Power Service
+[Service]
+Restart=always
+ExecStart=/home/mattitm/tidal-connect-usb-power/usb_power.py
+User=tidal
+Group=systemd-journal
+RestartSec=1
+KillMode=control-group
+[Install]
+WantedBy=multi-user.target
